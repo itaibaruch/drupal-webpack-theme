@@ -1,0 +1,25 @@
+name: dw
+description: dw theme for Drupal 8.
+version: '1.0.1'
+type: theme
+core: 8.x
+base theme: stable
+
+libraries:
+  - dw/global
+
+stylesheets-remove:
+#  - core/assets/vendor/normalize-css/normalize.css
+#  - core/modules/system/css/system.module.css
+#  - core/modules/system/css/system.theme.css
+#  - core/modules/views/css/views.module.css
+
+regions:
+  headline: 'Headline'
+  header: 'Header'
+  content: 'Content'
+  sidebar_left: 'Sidebar Left'
+  sidebar_right: 'Sidebar Right'
+  footer: 'Footer'
+
+

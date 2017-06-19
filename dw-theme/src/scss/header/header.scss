@@ -1,0 +1,16 @@
+@import "../variables";
+@import "../mixin";
+
+.header {
+  &__branding { 
+    width: 10rem;
+  }
+}
+
+@include laptop {
+  .header {
+    &__branding {
+      width: 15rem;
+    }
+  }
+}

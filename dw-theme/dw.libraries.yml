@@ -1,0 +1,16 @@
+global:
+  version: 0.0.1
+  css:
+    theme:
+      dist/style.css: {}
+  js:
+    dist/bundle.min.js: {}
+  dependencies:
+    - core/jquery
+
+hmr-lib:
+  header: true
+  js:
+    http://0.0.0.0:9000/dist/bundle.js: { type: external }
+  dependencies:
+    - core/jquery

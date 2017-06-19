@@ -1,0 +1,28 @@
+<?php
+
+use Drupal\Core\Site\Settings;
+
+/**
+ * @file
+ * Functions to support theming in the dw theme.
+ */
+
+// Adds hmr (Hot Model Reload) script on development mode
+// 'dw_env_dev' has to be defined at settings.local.php
+function dw_preprocess_page(&$variables) {
+  if (Settings::get('dw_env_dev', FALSE)) {
+    // if development mode
+    $variables['#attached']['library'][] = 'dw/hmr-lib';
+  }
+}
+
+function dw_page_attachments_alter(&$attachments) {
+  // Conditionally remove an asset.
+  if (Settings::get('dw_env_dev', FALSE)) {
+    // if development mode
+    if (in_array('dw/global', $attachments['#attached']['library'])) {
+      $index = array_search('dw/global', $attachments['#attached']['library']);
+      unset($attachments['#attached']['library'][$index]);
+    }
+  }
+}

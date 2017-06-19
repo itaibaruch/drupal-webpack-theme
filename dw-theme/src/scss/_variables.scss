@@ -1,0 +1,21 @@
+/**
+ * VARIABLES
+ */
+
+
+//breakpoints
+$layout-breakpoint-xs: 767px !default;
+$layout-breakpoint-sm: 768px !default;
+$layout-breakpoint-md: 992px !default;
+$layout-breakpoint-lg: 1200px !default;
+
+//z-index
+$z-model: 5;
+$z-overlay: 4;
+$z-dropdown: 3;
+$z-header: 2;
+$z-footer: 1;
+
+//colors
+$dw_black: #000000;
+$dw_white: #ffffff;

@@ -1,0 +1,14 @@
+//vendors
+@import "vendor/bootstrap";
+
+//globals
+@import 'variables';
+@import 'base';
+@import 'animation';
+@import 'mixin';
+@import 'print';
+
+//components BEM
+@import 'header/header';
+
+
